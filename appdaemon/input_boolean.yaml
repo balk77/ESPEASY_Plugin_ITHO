@@ -1,0 +1,4 @@
+input_boolean:
+  itho_remote_override:
+    name: Itho remote override
+    initial: off
