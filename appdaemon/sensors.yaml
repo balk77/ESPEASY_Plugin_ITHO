@@ -1,0 +1,16 @@
+sensors:
+  - platform: mqtt
+    name: "itho_ventilatie"
+    #state_topic: "/hass/itho"
+    state_topic: "/zolder/itho/State"
+  - platform: mqtt
+    name: "itho_lastidindex"
+    state_topic: "/zolder/itho/LastIDindex"
+  - platform: mqtt
+    name: ITHO Laatste bediening
+    state_topic: "/zolder/itho/LastIDindex"
+    value_template: >
+      {% if value|float==0 %}Hass{% endif %}
+      {% if value|float==1 %}Woonkamer{% endif %}
+      {% if value|float==2 %}Badkamer{% endif %}
+      {% if value|float==3 %}WC{% endif %}
