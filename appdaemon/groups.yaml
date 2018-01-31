@@ -1,0 +1,8 @@
+groups:
+  itho:
+    name: Itho control
+    control: hidden
+    entities:
+      - sensor.itho_laatste_bediening
+      - input_boolean.itho_remote_override
+      - input_select.fanstate
